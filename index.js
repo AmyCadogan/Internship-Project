@@ -27,7 +27,7 @@ app.listen(3000,() =>{
 
 //show all products
 app.get('/api/devices',(req,res) => {
-  let sql = "SELECT * FROM temparaturestudy";
+  let sql = "SELECT * FROM tempstatus";
   let query = conn.query(sql, (err, results) => {
     if(err) throw err;
     res.send(JSON.stringify({"status": 200, "error": null, "response": results}));
@@ -36,7 +36,7 @@ app.get('/api/devices',(req,res) => {
 
 //show one product
 app.get('/api/devices/:id',(req,res) => {
-  let sql = "SELECT FROM temparaturestudy where serialnum="+req.params.id;
+  let sql = "SELECT FROM tempstatus where serialnum="+req.params.id;
   let query = conn.query(sql, (err,results) => {
     if (err) throw err;
     res.send(JSON.stringify({"status": 200, "error": null, "response": results}));
