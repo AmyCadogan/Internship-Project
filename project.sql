@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `tempstatus` (
 --
 
 INSERT INTO `tempstatus` (`serialnum`, `time`, `temparature`, `date`, `status`) VALUES
-('', '2020-02-11 17:27:49', '', '2020-02-11', 'active'),
+('0', '2020-02-11 17:27:49', '', '2020-02-11', 'active'),
 ('1', '2020-02-11 18:06:27', '', '2020-02-11', 'not active\r\n');
 COMMIT;
 
