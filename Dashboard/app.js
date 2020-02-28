@@ -13,13 +13,4 @@ import { HttpClientModule } from '@angular/common/http';
 	.otherwise({
 		redirectTo: '/'
 	});
-});.
-    HttpClientModule,
-  ],
-  declarations: [
-    AppComponent,
-  ],
-  bootstrap: [ AppComponent ]
-})
-export class AppModule {}
-
+});
