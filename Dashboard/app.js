@@ -8,9 +8,18 @@ import { HttpClientModule } from '@angular/common/http';
    myApp.config(function($routeProvider){
 	$routeProvider.when('/',{
 		controller:'DevicesController',
-		templateUrl:'/dashtable.html'
+		templateUrl:'table.html'
 	})
 	.otherwise({
 		redirectTo: '/'
 	});
 });
+myApp.controller('DeviceController', function($scope, $http, $location, $routeParams){
+	console.log('DeviceController loaded')
+	$scope.getDevices = function(){
+		var device = null;
+		$http.get('/api/devices').success(function(data) {
+			device = data;
+		});
+	}
+}
