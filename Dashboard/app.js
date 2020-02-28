@@ -1,6 +1,11 @@
 var myApp= angular.module('myApp',['ngRoute']);
 
-myApp.config(function($routeProvider){
+import { NgModule }         from '@angular/core';
+import { BrowserModule }    from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
+@NgModule({
+   myApp.config(function($routeProvider){
 	$routeProvider.when('/',{
 		controller:'DevicesController',
 		templateUrl:'/dashtable.html'
@@ -8,4 +13,13 @@ myApp.config(function($routeProvider){
 	.otherwise({
 		redirectTo: '/'
 	});
-});
+});.
+    HttpClientModule,
+  ],
+  declarations: [
+    AppComponent,
+  ],
+  bootstrap: [ AppComponent ]
+})
+export class AppModule {}
+
